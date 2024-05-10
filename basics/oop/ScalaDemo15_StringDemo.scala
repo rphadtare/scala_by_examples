@@ -52,7 +52,7 @@ object StringDemo {
 
     println(s"last index of 'India' in string: ${s.lastIndexOf("India")}")
 
-    println(s"Replacing first instance of 'India' in string: ${s.replace("India1", "Bharat")}")
+    println(s"Replacing all instances of 'India' in string: ${s.replace("India", "Bharat")}")
 
   }
 
