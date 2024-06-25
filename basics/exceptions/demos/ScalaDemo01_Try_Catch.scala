@@ -1,4 +1,5 @@
 package exceptions.demos
+import scala.math.random
 import scala.util.Random
 object ScalaDemo01_Try_Catch {
 
@@ -10,8 +11,9 @@ object ScalaDemo01_Try_Catch {
   def main(args: Array[String]): Unit = {
 
     try{
-
-      Random.between(0,2) match {
+      // this will work in 2.13 scala -> Random.between(0,2)
+      val rand_int = 1
+       rand_int match {
         case 1 =>
             var result = num1/num2
         case 0 =>

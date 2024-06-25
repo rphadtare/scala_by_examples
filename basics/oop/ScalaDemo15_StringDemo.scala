@@ -12,7 +12,8 @@ object StringDemo {
     println(s"str_sb: $str_sb")
 
     str += " is test!!"
-    str_sb.addAll(" is test!!")
+    //This will workk in scala 2.13.x -> str_sb.addAll(" is test!!")
+    str_sb.append(" is test!!")
 
     println("after..")
     println(s"str: $str")
@@ -57,6 +58,8 @@ object StringDemo {
   }
 
   def main(args: Array[String]): Unit = {
+    stringImmutabilityDemo
+
     var str = "India"
     println(s"Character at 3rd position in India: ${str.charAt(3)}")
 

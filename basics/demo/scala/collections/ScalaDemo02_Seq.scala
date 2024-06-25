@@ -20,7 +20,8 @@ object ScalaDemo02_Seq {
 
     var vector = Vector(1, 2, 3, 4, 5)
     vector :+= 6
-    vector = vector :++ List(7,8)
+    vector = vector.union(List(7,8))
+    //in 2.13 - vector.appendAll(List(7,8)) or vector:++List(7,8)
 
     vector = vector.filter(r => r!=4)
 
@@ -37,14 +38,14 @@ object ScalaDemo02_Seq {
   def listBufferDemo(): Unit = {
     var listBuffer = ListBuffer(1,2,3,4,6,6)
     listBuffer += 7
-    listBuffer.addOne(9)
+    //in scala 2.13 - listBuffer.addOne(9)
     listBuffer --= List(2,4)
     listBuffer(0) = 10
     println(listBuffer)
   }
   
   def main(args: Array[String]): Unit = {
-    listBufferDemo()
+    vectorDemo()
   }
 
 }

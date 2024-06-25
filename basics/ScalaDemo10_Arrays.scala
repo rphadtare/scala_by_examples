@@ -26,8 +26,9 @@ object ScalaDemo10_Arrays {
 
     Array.range(0, 10, 2).foreach(e => print(e + "\t"))
 
+    //This will work only in Scala - 2.13
     println("Copy as demo: ")
-    Array.copyAs[String](arr, 5).foreach(e => print(e + "\t"))
+    //Array.copyAs[String](arr, 5).foreach(e => print(e + "\t"))
 
     println()
     arrOfInt = Array.fill[Int](5)(0)
