@@ -12,7 +12,9 @@ object ScalaDemo04_Throws {
   def validate(str:String) = if(str == null) throw new NullPointerException("Given string is null!!") else str.toInt
   def main(args: Array[String]): Unit = {
 
-    Random.between(0,2) match {
+    // this will work in 2.13 scala -> Random.between(0,2)
+    val rand_int = 1
+    rand_int match {
       case 0 => num = "R0"
       case 1 => num = null
     }
